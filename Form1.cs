@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,8 @@ namespace C_sharp_Lab5
         public Form1()
         {
             InitializeComponent();
+            textBox1.ScrollBars = ScrollBars.Both;
+            TextBox.sc
         }
 
         private void NewFIleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,7 +32,7 @@ namespace C_sharp_Lab5
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                if(openFileDialog.ShowDialog()==DialogResult.OK)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     currentFilePath = openFileDialog.FileName;
                     textBox1.Text = File.ReadAllText(currentFilePath);
@@ -47,13 +50,8 @@ namespace C_sharp_Lab5
             }
             else
             {
-                File.WriteAllText(currentFilePath, textBox1.Text); 
+                File.WriteAllText(currentFilePath, textBox1.Text);
             }
-        }
-
-        private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,8 +60,8 @@ namespace C_sharp_Lab5
             {
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    currentFilePath=saveFileDialog.FileName;
-                    File.WriteAllText(currentFilePath , textBox1.Text);
+                    currentFilePath = saveFileDialog.FileName;
+                    File.WriteAllText(currentFilePath, textBox1.Text);
                 }
             }
         }
@@ -71,12 +69,18 @@ namespace C_sharp_Lab5
         private void processToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string processedText = RemoveEmptyLines(textBox1.Text);
+            textBox1.Text = processedText;
         }
 
-        private string RemoveEmptyLines(string text)
+        private string RemoveEmptyLines(string input)
         {
-            if (string.IsNullOrEmpty(text))
-            throw new NotImplementedException();
+            string result = Regex.Replace(input, @"^[ \t\r\n]*$", string.Empty, RegexOptions.Multiline);
+            return result;
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
         }
     }
 }
