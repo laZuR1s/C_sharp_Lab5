@@ -18,8 +18,6 @@ namespace C_sharp_Lab5
         public Form1()
         {
             InitializeComponent();
-            textBox1.ScrollBars = ScrollBars.Both;
-            TextBox.sc
         }
 
         private void NewFIleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,6 +79,11 @@ namespace C_sharp_Lab5
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
         }
     }
 }

@@ -38,7 +38,6 @@
             this.fSDFSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sDFSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститьРезультатToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,28 +76,28 @@
             // dFSFSToolStripMenuItem
             // 
             this.dFSFSToolStripMenuItem.Name = "dFSFSToolStripMenuItem";
-            this.dFSFSToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dFSFSToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.dFSFSToolStripMenuItem.Text = "Новый файл";
             this.dFSFSToolStripMenuItem.Click += new System.EventHandler(this.NewFIleToolStripMenuItem_Click);
             // 
             // открытьФайлToolStripMenuItem
             // 
             this.открытьФайлToolStripMenuItem.Name = "открытьФайлToolStripMenuItem";
-            this.открытьФайлToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьФайлToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.открытьФайлToolStripMenuItem.Text = "Открыть файл";
             this.открытьФайлToolStripMenuItem.Click += new System.EventHandler(this.OpenFileToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 
@@ -125,20 +124,11 @@
             this.очиститьРезультатToolStripMenuItem.Text = "Очистить результат";
             this.очиститьРезультатToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(783, 24);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 426);
-            this.vScrollBar1.TabIndex = 2;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -163,7 +153,6 @@
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохранитьКакToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem очиститьРезультатToolStripMenuItem;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }
 
