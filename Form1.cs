@@ -50,5 +50,33 @@ namespace C_sharp_Lab5
                 File.WriteAllText(currentFilePath, textBox1.Text); 
             }
         }
+
+        private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    currentFilePath=saveFileDialog.FileName;
+                    File.WriteAllText(currentFilePath , textBox1.Text);
+                }
+            }
+        }
+
+        private void processToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string processedText = RemoveEmptyLines(textBox1.Text);
+        }
+
+        private string RemoveEmptyLines(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+            throw new NotImplementedException();
+        }
     }
 }
