@@ -42,9 +42,9 @@ namespace C_sharp_Lab5
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
+            if (string.IsNullOrEmpty(currentFilePath))
             {
-                SaveToolStripMenuItem_Click(sender, e);
+                SaveAsToolStripMenuItem_Click(sender, e);
             }
             else
             {
