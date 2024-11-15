@@ -24,6 +24,16 @@ namespace C_sharp_Lab5
         {
             textBox1.Clear();
             currentFilePath = string.Empty;
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                saveFileDialog.Title = "Сохранить новый файл";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    
+                    File.WriteAllText(saveFileDialog.FileName, textBox1.Text);
+                }
+            }
         }
 
         private void OpenFileToolStripMenuItem_Click(object sender, EventArgs e)
