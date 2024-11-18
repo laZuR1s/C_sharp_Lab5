@@ -30,8 +30,10 @@ namespace C_sharp_Lab5
                 saveFileDialog.Title = "Сохранить новый файл";
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    
-                    File.WriteAllText(saveFileDialog.FileName, textBox1.Text);
+                    currentFilePath = saveFileDialog.FileName;
+                    File.WriteAllText(currentFilePath, textBox1.Text);
+                    textBox1.Text = File.ReadAllText(currentFilePath);
+
                 }
             }
         }
@@ -40,6 +42,7 @@ namespace C_sharp_Lab5
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                openFileDialog.Title = "Открыть файл";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     currentFilePath = openFileDialog.FileName;
@@ -66,6 +69,7 @@ namespace C_sharp_Lab5
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
+                saveFileDialog.Title = "Сохранить как";
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     currentFilePath = saveFileDialog.FileName;
@@ -77,13 +81,14 @@ namespace C_sharp_Lab5
         private void processToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string processedText = RemoveEmptyLines(textBox1.Text);
-            textBox1.Text = processedText;
+            textBox2.Text = processedText;
         }
 
         private string RemoveEmptyLines(string input)
         {
-            string result = Regex.Replace(input, @"^[ \t\r\n]*$", string.Empty, RegexOptions.Multiline);
-            return result;
+            string[] lines = input.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            string[] filteredLines = lines.Where(line => !string.IsNullOrWhiteSpace(line)).ToArray();
+            return string.Join(Environment.NewLine, filteredLines);
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,6 +99,11 @@ namespace C_sharp_Lab5
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
 
+        }
+
+        private void saveModifiedFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(currentFilePath, textBox2.Text);
         }
     }
 }

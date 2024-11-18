@@ -38,25 +38,27 @@
             this.fSDFSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sDFSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститьРезультатToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.saveModifiedFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Dubai", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Dubai", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(0, 24);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(800, 426);
+            this.textBox1.Size = new System.Drawing.Size(800, 208);
             this.textBox1.TabIndex = 0;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jKNNJToolStripMenuItem,
-            this.fSDFSDToolStripMenuItem});
+            this.fSDFSDToolStripMenuItem,
+            this.saveModifiedFileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -125,11 +127,29 @@
             this.очиститьРезультатToolStripMenuItem.Text = "Очистить результат";
             this.очиститьРезультатToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Dubai", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(0, 226);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.Size = new System.Drawing.Size(800, 228);
+            this.textBox2.TabIndex = 2;
+            // 
+            // saveModifiedFileToolStripMenuItem
+            // 
+            this.saveModifiedFileToolStripMenuItem.Name = "saveModifiedFileToolStripMenuItem";
+            this.saveModifiedFileToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.saveModifiedFileToolStripMenuItem.Text = "Save modified file";
+            this.saveModifiedFileToolStripMenuItem.Click += new System.EventHandler(this.saveModifiedFileToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -154,6 +174,8 @@
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохранитьКакToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem очиститьРезультатToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ToolStripMenuItem saveModifiedFileToolStripMenuItem;
     }
 }
 
