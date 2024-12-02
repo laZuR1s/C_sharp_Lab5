@@ -38,8 +38,8 @@
             this.fSDFSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sDFSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститьРезультатToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.saveModifiedFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(800, 208);
+            this.textBox1.Size = new System.Drawing.Size(402, 433);
             this.textBox1.TabIndex = 0;
             // 
             // menuStrip1
@@ -127,22 +127,22 @@
             this.очиститьРезультатToolStripMenuItem.Text = "Очистить результат";
             this.очиститьРезультатToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Dubai", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(0, 226);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(800, 228);
-            this.textBox2.TabIndex = 2;
-            // 
             // saveModifiedFileToolStripMenuItem
             // 
             this.saveModifiedFileToolStripMenuItem.Name = "saveModifiedFileToolStripMenuItem";
             this.saveModifiedFileToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
             this.saveModifiedFileToolStripMenuItem.Text = "Save modified file";
             this.saveModifiedFileToolStripMenuItem.Click += new System.EventHandler(this.saveModifiedFileToolStripMenuItem_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Dubai", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(397, 24);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.Size = new System.Drawing.Size(391, 433);
+            this.textBox2.TabIndex = 2;
             // 
             // Form1
             // 

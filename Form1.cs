@@ -103,7 +103,22 @@ namespace C_sharp_Lab5
 
         private void saveModifiedFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(currentFilePath, textBox2.Text);
+            if (string.IsNullOrEmpty(currentFilePath))
+            {
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.Title = "Сохранить как";
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        currentFilePath = saveFileDialog.FileName;
+                        File.WriteAllText(currentFilePath, textBox2.Text);
+                    }
+                }
+            }
+            else
+            {
+                File.WriteAllText(currentFilePath, textBox2.Text);
+            }
         }
     }
 }
