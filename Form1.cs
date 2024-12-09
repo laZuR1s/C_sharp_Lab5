@@ -86,19 +86,31 @@ namespace C_sharp_Lab5
 
         private string RemoveEmptyLines(string input)
         {
-            string[] lines = input.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-            string[] filteredLines = lines.Where(line => !string.IsNullOrWhiteSpace(line)).ToArray();
-            return string.Join(Environment.NewLine, filteredLines);
-        }
+            string[] lines = input.Split(new[] { "\n" }, StringSplitOptions.None); 
+            List<string> filteredLines = new List<string>(); 
 
+            for (int i = 0; i < lines.Length; i++)
+            {
+                bool isEmpty = true;
+
+                foreach (char c in lines[i])
+                {
+                    if (c != ' ' && c != '\t' && c != '\r' && c != '\n')
+                    {
+                        isEmpty = false; 
+                        break;
+                    }
+                }
+                if (!isEmpty)
+                {
+                    filteredLines.Add(lines[i]);
+                }
+            }
+            return string.Join("\n", filteredLines);
+        }
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
-        }
-
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
         }
 
         private void saveModifiedFileToolStripMenuItem_Click(object sender, EventArgs e)
